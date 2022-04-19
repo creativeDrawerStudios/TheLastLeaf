@@ -1,11 +1,11 @@
 # The last leaf
-A rpg game that doesn't have a name... yet<br/>
+A rpg game that has a name... <br/>
 <details>
   <summary>Details</summary>
   <ul>
     <li>Collision detection and movement working</li>
     <ul>
-      <li>Coming soon (art) lol</li>
+      <li>Coming soon (npc's) lol</li>
     </ul>
     <ul>
       <ul>
