@@ -1,5 +1,6 @@
 # The last leaf
-A rpg game that has a name... <br/>
+>A rpg game that has a name... <br/>
+>>Image files not included <br/>
 <details>
   <summary>Details</summary>
   <ul>
@@ -9,7 +10,7 @@ A rpg game that has a name... <br/>
     </ul>
     <ul>
       <ul>
-        <li>Developed by, creativeDrawerStudios</li>
+        <li>Developed by,ClassicMC </li>
       </ul>
     </ul>
   </ul>
