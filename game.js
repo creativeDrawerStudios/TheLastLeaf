@@ -93,7 +93,8 @@ function drawLeaf(){
 function text(text,x,y,color,opacity=1){
     c.globalAlpha = opacity;
     c.fillStyle = color;
-    c.font = '50px Rubik Moonrocks';
+    // c.font = '50px Rubik Moonrocks';
+    c.font = '50px Sans-Serif'
     c.fillText(text,x,y);
     c.globalAlpha = 1;
 }
