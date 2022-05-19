@@ -1,6 +1,7 @@
 # The last leaf
 >A rpg game that has a name... <br/>
 >>Image files not included <br/>
+>>Full Version will not be avaliable on github
 <details>
   <summary>Details</summary>
   <ul>
