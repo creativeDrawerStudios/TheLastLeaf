@@ -1,18 +1,24 @@
 # The last leaf
->A rpg game that has a name... <br/>
->>Image files not included <br/>
->>Full Version will not be avaliable on github
+> A game made by, <a href="https://www.github.com/ClassicMC-Studios">ClassicMC</a>
+
 <details>
-  <summary>Details</summary>
-  <ul>
-    <li>Collision detection and movement working</li>
-    <ul>
-      <li>Coming soon (npc's) lol</li>
-    </ul>
-    <ul>
-      <ul>
-        <li>Developed by,ClassicMC </li>
-      </ul>
-    </ul>
-  </ul>
+	<summary>Story</summary>
+	<ul>
+		<li>
+			<b>
+			You play as a leaf during the<br/>
+			beginning of winter you can<br/>
+			adventure but your life isn't<br/>
+			permanent...
+			</b>
+		</li>
+	</ul>
 </details>
+
+All art code and assets by
+- <b>ClassicMC</b>
+
+<em>
+Some help naming from
+- austinIs2
+</em>
