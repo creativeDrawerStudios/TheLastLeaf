@@ -60,6 +60,10 @@ function keyReleased(evt){
     if(evt.keyCode == 40){key.downKeyPressed = false;}
     if(evt.keyCode == 32){key.spaceKeyPressed = false;}
 }
+function drawBg(){
+    es.image(images.bg,0-cameraPOS.x,0-cameraPOS.y,720,480,0.15);
+    es.image(images.bg,-720-cameraPOS.x,0-cameraPOS.y,720,480,0.15);
+}
 function checkAllCol(){if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+60,300-cameraPOS.y+25,45,100)){return true;};if(es.checkCollisions(720/2-25,480/2-25,50,50,-20-cameraPOS.x,-20-cameraPOS.y,20,520)||es.checkCollisions(720/2-25,480/2-25,50,50,-20-cameraPOS.x,-20-cameraPOS.y,760,20)||es.checkCollisions(720/2-25,480/2-25,50,50,-20-cameraPOS.x,480-cameraPOS.y,760,20)||es.checkCollisions(720/2-25,480/2-25,50,50,720-cameraPOS.x,0-cameraPOS.y,-20,480||es.checkCollisions(720/2-25,480/2-25,50,50,-20-cameraPOS.x,-20-cameraPOS.y,20,520))){return true;}}
 function redraw(){
     c.save()
@@ -75,14 +79,15 @@ function redraw(){
     else{
         es.background("#996633");
         es.image(images.title,190,50,360,300,project.tOPC);
-        es.image(images.bg,0-cameraPOS.x,0-cameraPOS.y,720,480,0.15);
+        drawBg()
         es.image(images.grass,0-cameraPOS.x,0-cameraPOS.y,720,480,0.1);
         es.image(images.mud,300-cameraPOS.x,300-cameraPOS.y,300,200);
-        es.image(images.tree,150-cameraPOS.x-40,100-cameraPOS.y,150,150);
         //The long row of hitboxes [P,WL,WU,WD,WR,NPC1,NPC1TALK]
         //es.drawHitbox(720/2-25,480/2-25,50,50);es.drawHitbox(-20-cameraPOS.x,-20-cameraPOS.y,20,520);es.drawHitbox(-20-cameraPOS.x,-20-cameraPOS.y,760,20);es.drawHitbox(-20-cameraPOS.x,480-cameraPOS.y,760,20);es.drawHitbox(740-cameraPOS.x,0-cameraPOS.y,-20,480);es.drawHitbox(200-cameraPOS.x+60,300-cameraPOS.y+25,45,100);es.drawHitbox(200-cameraPOS.x+55,300-cameraPOS.y+20,55,110);
         new Npc(200,300);
         drawLeaf();
+        es.image(images.tree,150-cameraPOS.x-40,100-cameraPOS.y,150,150,0.7);
+        es.image(images.tree,-20-cameraPOS.x-40,200-cameraPOS.y,150,150,0.7);
         if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)&&project.tbs == 1){es.image(images.textbox,10,290,350,200);es.text("Where am I",100,390,"#4d2600");es.text("???:",100,370,"#4d2600");}
         else if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)&&project.tbs == 2){es.image(images.textbox,10,290,350,200);es.text("I've lost my village",100,390,"#4d2600");es.text("???:",100,370,"#4d2600");}
         else{project.tbs = 0}
