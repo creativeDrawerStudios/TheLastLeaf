@@ -29,7 +29,6 @@ function drawLeaf(){
 }
 function playerMove(){
     if(key.spaceKeyPressed&&project.scene == 0){project.scene = 1;clearInterval(slowAnim);es.clear()}
-    if(key.spaceKeyPressed && es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)){project.tbs = 1;}
     else if(key.rightKeyPressed){move("right",.5,1,0);}
     else if(key.leftKeyPresed){move("left",-0.75,-1,0);}
     else if(key.upKeyPressed){move("up",.5,0,-1)}
@@ -85,9 +84,19 @@ function redraw(){
         new Npc(200,300);
         drawLeaf();
         if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)&&project.tbs == 1){es.image(images.textbox,10,290,350,200);es.text("Where am I",100,390,"#4d2600");es.text("???:",100,370,"#4d2600");}
+        else if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)&&project.tbs == 2){es.image(images.textbox,10,290,350,200);es.text("I've lost my village",100,390,"#4d2600");es.text("???:",100,370,"#4d2600");}
         else{project.tbs = 0}
     }
 }
+document.addEventListener('keydown',function (evt){
+    if(event.keyCode == 32){
+        if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)){
+            if(project.tbs == 0){project.tbs = 1;}
+            else if(project.tbs == 1){project.tbs = 2;}
+            else{project.tbs = 0;}
+        }
+    }
+});
 window.main = function(){
     window.requestAnimationFrame( main );
     redraw();
