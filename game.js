@@ -78,7 +78,6 @@ function redraw(){
     }
     else{
         es.background("#996633");
-        es.image(images.title,190,50,360,300,project.tOPC);
         drawBg()
         es.image(images.grass,0-cameraPOS.x,0-cameraPOS.y,720,480,0.1);
         es.image(images.mud,300-cameraPOS.x,300-cameraPOS.y,300,200);
@@ -91,6 +90,7 @@ function redraw(){
         if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)&&project.tbs == 1){es.image(images.textbox,10,290,350,200);es.text("Where am I",100,390,"#4d2600");es.text("???:",100,370,"#4d2600");}
         else if(es.checkCollisions(720/2-25,480/2-25,50,50,200-cameraPOS.x+55,300-cameraPOS.y+20,55,110)&&project.tbs == 2){es.image(images.textbox,10,290,350,200);es.text("I've lost my village",100,390,"#4d2600");es.text("???:",100,370,"#4d2600");}
         else{project.tbs = 0}
+        es.image(images.title,190,50,360,300,project.tOPC);
     }
 }
 document.addEventListener('keydown',function (evt){
