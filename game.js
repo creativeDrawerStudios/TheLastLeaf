@@ -12,7 +12,6 @@ let cameraPOS = {x:0,y:0}
 let keyUpdate = setInterval(keyInter,1);
 let slowAnim = setInterval(blink,500);
 //tester
-let snow = setInterval(draw, 33);
 var angle = 0;
 var W = canvas.width;
 var H = canvas.height;  
